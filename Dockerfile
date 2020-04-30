@@ -25,3 +25,5 @@ RUN pecl install http://pecl.php.net/get/mcrypt-1.0.3.tgz && docker-php-ext-enab
 RUN pecl install http://pecl.php.net/get/redis-5.2.1.tgz && docker-php-ext-enable redis
 RUN pecl install http://pecl.php.net/get/imagick-3.4.4.tgz && docker-php-ext-enable imagick
 RUN pecl install http://pecl.php.net/get/mongodb-1.7.4.tgz && docker-php-ext-enable mongodb
+RUN pecl install http://pecl.php.net/get/protobuf-3.11.4.tgz && docker-php-ext-enable protobuf && \
+pecl install http://pecl.php.net/get/grpc-1.28.0.tgz && docker-php-ext-enable grpc
