@@ -21,14 +21,14 @@ docker-php-ext-install zip
 RUN pecl install http://pecl.php.net/get/mcrypt-1.0.3.tgz && docker-php-ext-enable mcrypt
 RUN pecl install http://pecl.php.net/get/redis-5.2.1.tgz && docker-php-ext-enable redis
 RUN pecl install http://pecl.php.net/get/imagick-3.4.4.tgz && docker-php-ext-enable imagick
-RUN pecl install http://pecl.php.net/get/mongodb-1.7.4.tgz && docker-php-ext-enable mongodb
-RUN pecl install http://pecl.php.net/get/protobuf-3.11.4.tgz && docker-php-ext-enable protobuf && \
-pecl install http://pecl.php.net/get/grpc-1.28.0.tgz && docker-php-ext-enable grpc
+# RUN pecl install http://pecl.php.net/get/mongodb-1.7.4.tgz && docker-php-ext-enable mongodb
+# RUN pecl install http://pecl.php.net/get/protobuf-3.11.4.tgz && docker-php-ext-enable protobuf && \
+# pecl install http://pecl.php.net/get/grpc-1.28.0.tgz && docker-php-ext-enable grpc
 
 RUN mkdir -p ~/build/tmp && \
 cd ~/build && \
 rm -rf ./swoole-src && \
-curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.4.18.tar.gz -L && \
+curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.5.2.tar.gz -L && \
 tar zxvf ./tmp/swoole.tar.gz && \
 mv swoole-src* swoole-src && \
 cd swoole-src && \
