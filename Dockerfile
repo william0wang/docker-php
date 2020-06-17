@@ -28,7 +28,7 @@ pecl install http://pecl.php.net/get/grpc-1.28.0.tgz && docker-php-ext-enable gr
 RUN mkdir -p ~/build/tmp && \
 cd ~/build && \
 rm -rf ./swoole-src && \
-curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.4.17.tar.gz -L && \
+curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.4.18.tar.gz -L && \
 tar zxvf ./tmp/swoole.tar.gz && \
 mv swoole-src* swoole-src && \
 cd swoole-src && \
