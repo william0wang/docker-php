@@ -28,7 +28,7 @@ RUN pecl install http://pecl.php.net/get/imagick-3.4.4.tgz && docker-php-ext-ena
 RUN mkdir -p ~/build/tmp && \
 cd ~/build && \
 rm -rf ./swoole-src && \
-curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.5.2.tar.gz -L && \
+curl -o ./tmp/swoole.tar.gz https://github.com/swoole/swoole-src/archive/v4.4.19.tar.gz -L && \
 tar zxvf ./tmp/swoole.tar.gz && \
 mv swoole-src* swoole-src && \
 cd swoole-src && \
